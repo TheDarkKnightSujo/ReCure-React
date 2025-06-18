@@ -31,7 +31,7 @@ const PatientRegistration = () => {
         <>
 
         <div className="create">
-            <h2 className="text-2xl font-bold pt-[120px]">Sign In to ReCure</h2>
+            <h2 className="text-2xl font-bold pt-[120px]">Sign Up to ReCure</h2>
             <form onSubmit={()=>{navigate("/dashboard")}}>
                 <div className="flex flex-row gap-4">
                     <div>
@@ -99,7 +99,7 @@ const PatientRegistration = () => {
                     <option value="Doctor">Doctor</option>
                 </select>
                 <p className='pb-2'>Already have an account? <Link to="/login">Login</Link></p>
-                {!isPending && <button>Sign In</button>}
+                {!isPending && <button>Sign Up</button>}
             </form>
         </div>
         </>
