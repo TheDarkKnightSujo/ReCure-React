@@ -37,10 +37,10 @@ const Footer=()=>
             <div className="footer-column">
                 <h3>Connect With Us</h3>
                 <ul className="footer-links">
-                    <li><a href="https://www.facebook.com/suvidhamahilamandal/" className="footer-link"> Facebook</a></li>
-                    <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fsuvidhafoundat1" className="footer-link"> Twitter</a></li>
-                    <li><a href="https://www.linkedin.com/company/suvidha-foundation/posts/?feedView=all" className="footer-link"> LinkedIn</a></li>
-                    <li><a href="https://www.instagram.com/suvidha_mahila_mandal/" className="footer-link"> Instagram</a></li>
+                    <li><a href="#" className="footer-link"> Facebook</a></li>
+                    <li><a href="#" className="footer-link"> Twitter</a></li>
+                    <li><a href="#" className="footer-link"> LinkedIn</a></li>
+                    <li><a href="#" className="footer-link"> Instagram</a></li>
                 </ul>
             </div>
         </div>
