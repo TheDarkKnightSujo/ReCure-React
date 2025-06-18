@@ -2,7 +2,7 @@ import React from "react";
 import './Features.css'
 const Features=()=>{
     return(
-        <section className="features">
+        <section className="features w-100vw mx-auto">
         <h1 className="title">Why Choose Recure?</h1>
         <div className="features-grid">
             <div className="feature-card">
