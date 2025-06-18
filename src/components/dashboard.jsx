@@ -15,7 +15,7 @@ const Dashboard = () => {
                     <h2 className="text-xl font-bold">Upload Prescription</h2>
                 </div>
                 <div className="tile flex flex-col justify-center items-center">
-                    <a href="/#">
+                    <a href="/checkup">
                     <FontAwesomeIcon icon={faLaptopMedical} className="w-[120px] h-[120px] p-6"/>
                     <h2 className="text-xl font-bold">Daily E-Checkup</h2>
                     </a>

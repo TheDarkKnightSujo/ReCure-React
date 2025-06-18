@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.section h1 {
+  font-size: 30px;
+  color: #f1356d;
+  margin: 10px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
