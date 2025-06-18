@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 * {
   margin :0;
   font-family: "Quicksand";
@@ -62,8 +66,20 @@
     background-color: #f5d06c;
 }
 
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+
 /* Stylish Dropdown Styles */
-.dropdown .nav-link {
+/* .dropdown .nav-link {
     position: relative;
     padding-right: 25px;
 }
@@ -141,5 +157,5 @@
 .dropdown-link:hover::before {
     width: 8px;
     opacity: 1;
-}
+} */
 

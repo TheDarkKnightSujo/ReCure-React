@@ -1,64 +1,109 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./PatientRegistration.css"
-const PatientRegistration = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        // Add more fields as needed
-    });
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
+// <p>Already have an account? <Link to="/login">Login</Link></p>
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const PatientRegistration = () => {
+    const [firstname, setFirstname] = useState('');
+    const [secondname, setSecondname] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [cnfpassword, setCnf] = useState('')
+    const [user, setUser] = useState('Patient');
+    const [isPending, setIsPending] = useState(false)
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Patient Registration Data:", formData);
-        // API call to backend
-    };
+        const blog = {firstname, password, author};
+
+        setIsPending(true)
+
+        fetch()
+
+        navigate(-1)
+    }
 
     return (
-        <div className="container">
-            <h2>Patient Registration</h2>
-            <p style={{ textAlign: "center" }}>Register to access ReCure</p>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Name:</label>
+        <>
+
+        <div className="create">
+            <h2 className="text-2xl font-bold pt-[120px]">Sign In to ReCure</h2>
+            <form onSubmit={()=>{navigate("/dashboard")}}>
+                <div className="flex flex-row gap-4">
+                    <div>
+                    <label>First Name</label>
                     <input 
                         type="text" 
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
+                        value={firstname} 
+                        onChange={(e)=> setFirstname(e.target.value)} 
+                        placeholder="Enter Firstname"
+                        required
                     />
-                </div>
-                <div>
-                    <label>Email:</label>
+                    </div>
+
+                    <div>
+                    <label>Surname</label>
                     <input 
-                        type="email" 
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
+                        type="text" 
+                        value={secondname} 
+                        onChange={(e)=> setSecondname(e.target.value)} 
+                        placeholder="Enter Surname"
+                        required
                     />
+                    </div>
                 </div>
-                <div>
-                    <label>Password:</label>
+                
+                <div className="flex flex-col gap-2">
+                    <div>
+                    <label>Email</label>
+                    <input 
+                        type="text" 
+                        value={email} 
+                        onChange={(e)=> setEmail(e.target.value)} 
+                        placeholder="Enter your Email"
+                        required
+                    />
+                    </div>
+
+                    <div>
+                    <label>Password</label>
                     <input 
                         type="password" 
-                        name="password"
-                        value={formData.password}
-                        onChange={handleChange}
+                        value={password} 
+                        onChange={(e)=> setPassword(e.target.value)} 
+                        placeholder="Enter a password"
+                        required
                     />
+                    </div>
+
+                    <div>
+                    <label>Confirm Password</label>
+                    <input 
+                        type="password" 
+                        value={cnfpassword} 
+                        onChange={(e)=> setCnf(e.target.value)} 
+                        placeholder="Confirm Password"
+                        required
+                    />
+                    </div>
                 </div>
-                <button type="submit">Register</button>
+
+                <label>User Type</label>
+                <select value={user} onChange={(e)=>setUser(e.target.value)}>
+                    <option value="Patient">Patient</option>
+                    <option value="Caregiver">Caregiver</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+                <p className='pb-2'>Already have an account? <Link to="/login">Login</Link></p>
+                {!isPending && <button>Sign In</button>}
             </form>
-            <p>Already have an account? <Link to="/login">Login</Link></p>
         </div>
+        </>
     );
-};
+}
 
 export default PatientRegistration;

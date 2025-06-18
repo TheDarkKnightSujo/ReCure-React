@@ -1,55 +1,55 @@
- .hero {
-            background-color:white;
-            padding: 60px 5%;
-            text-align: center;
-        }
+.hero {
+    background-color:white;
+    padding: 60px 5%;
+    text-align: center;
+}
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .hero h1 {
-            font-size: 36px;
-            color: #f1356d;
-            margin-bottom: 20px;
-        }
+.hero h1 {
+    font-size: 36px;
+    color: #f1356d;
+    margin-bottom: 20px;
+}
 
-        .hero p {
-            font-size: 18px;
-            color: white;
-            margin-bottom: 30px;
-        }
+.hero p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+}
 
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-        .hero-btn {
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
+.hero-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
 
-        .primary-btn {
-            background-color: #f1356d;
-            color: white;
-            border: none;
-        }
+.primary-btn {
+    background-color: #f1356d;
+    color: white;
+    border: none;
+}
 
-        .secondary-btn {
-            background-color: white;
-            color: #f1356d;
-            border: 2px solid #f1356d;
-        }
+.secondary-btn {
+    background-color: white;
+    color: #f1356d;
+    border: 2px solid #f1356d;
+}
 
-        .hero-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
