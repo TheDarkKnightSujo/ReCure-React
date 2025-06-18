@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import "./Navbar.css";
 
 const Navbar = () => {
+    const pathmame = useLocation().pathname
+    console.log(pathmame);
     return (
         <>
         <nav className="navbar">
@@ -13,7 +15,7 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            {(window.location.href === "http://localhost:5173/dashboard") ? (
+            {(pathmame === "/dashboard") ? (
             <div className="links text-xl font-bold ">
                 <Link to="/">Profile</Link>
             </div>
