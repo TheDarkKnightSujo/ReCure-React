@@ -3,11 +3,7 @@ import './Features.css'
 const Features=()=>{
     return(
         <section className="features">
-        <br/><br/><br/>
-        <h2 className="section-title">Why Choose Recure?</h2>
-        <div>
-            <br/><br/><br/>
-        </div>
+        <h1 className="title">Why Choose Recure?</h1>
         <div className="features-grid">
             <div className="feature-card">
                 <div className="feature-icon"><i class="fas fa-briefcase"></i></div>

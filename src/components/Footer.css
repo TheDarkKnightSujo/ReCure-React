@@ -13,7 +13,7 @@
         .footer-column h3 {
             font-size: 18px;
             margin-bottom: 20px;
-            color: yellow;
+            color: #f1356d;
         }
 
         .footer-links {
@@ -30,12 +30,13 @@
         }
 
         .footer-link:hover {
-            color: yellow;
+            color: #f1356d;
         }
 
-        .footer-bottom {
+        .footer-bottom p{
             margin-top: 40px;
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid #ede8e8;
+            color: white;
         }

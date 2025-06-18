@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin :0;
+  font-family: "Quicksand";
+
+}
+
 .features {
-  background-image: url('./hero image.png');
+  background-image: url('./patient.png');
   background-size: cover;
-  background-position: center;
+  background-position: start;
   background-repeat: no-repeat;
-  width: auto;
-  min-height: auto; /* Remove fixed height */
+  min-width: auto;
+  max-width: 1400px;
+  min-height: 500px; /* Remove fixed height */
+  border-radius: 20px;
+  margin: 20px auto;
   padding: 60px 5%; /* Add padding for spacing */
   position: relative;
 }
@@ -16,13 +27,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
 }
 
-.section-title {
+.title {
   text-align: center;
-  font-size: 28px;
-  color: #faa722;
+  font-size: 30px;
+  color: white;
   margin-bottom: 40px;
   position: relative; /* Ensure title stays above overlay */
   z-index: 1;
@@ -31,6 +41,7 @@
 .features-grid {
   display: flex;
   flex-direction: column; /* Stack cards vertically */
+  align-items: center;
   gap: 20px; /* Spacing between cards */
   max-width: 800px; /* Limit width for better readability */
   margin: 0 auto; /* Center the grid */

@@ -5,19 +5,13 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src="Recure_logo.png" alt="ReCure Logo" />
+                <img src="logo-img.png" alt="ReCure Logo" />
                 <span className="logo-text">ReCure</span>
             </div>
             
             <ul className="nav-links">
                 <li className="nav-item">
                     <Link to="/help" className="nav-link">Help & Support</Link>
-                </li>
-                <li className="nav-item">
-                    <div className="search-bar">
-                        <input type="text" className="search-input" placeholder="Search..." />
-                        <button className="search-button"><i className="fas fa-search"></i></button>
-                    </div>
                 </li>
                 <li className="nav-item dropdown">
                     <Link to="#" className="nav-link">Registration</Link>

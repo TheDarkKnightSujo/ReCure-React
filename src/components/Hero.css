@@ -1,5 +1,5 @@
  .hero {
-            background-color:#134f73;
+            background-color:white;
             padding: 60px 5%;
             text-align: center;
         }
@@ -11,7 +11,7 @@
 
         .hero h1 {
             font-size: 36px;
-            color: #faa722;
+            color: #f1356d;
             margin-bottom: 20px;
         }
 
@@ -38,15 +38,15 @@
         }
 
         .primary-btn {
-            background-color: darkgoldenrod;
+            background-color: #f1356d;
             color: white;
             border: none;
         }
 
         .secondary-btn {
             background-color: white;
-            color: darkgoldenrod;
-            border: 2px solid darkgoldenrod;
+            color: #f1356d;
+            border: 2px solid #f1356d;
         }
 
         .hero-btn:hover {
