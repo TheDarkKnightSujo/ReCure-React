@@ -4,7 +4,6 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const pathmame = useLocation().pathname
-    console.log(pathmame);
     return (
         <>
         <nav className="navbar">
