@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard.jsx';
 import Login from './components/login.jsx';
 import PatientRegistration from './components/PatientRegistration.jsx';
 import Checkup from './components/echeckup.jsx';
+import Dashboard_doctor from './components/dashboard-doctor.jsx';
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
                 <Route exact path="/dashboard" element={<Dashboard/>}/>
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/checkup" element={<Checkup/>}/>
+                <Route exact path="/dashboard-doctor" element={<Dashboard_doctor/>}/>
+                
             </Routes>
         </>
     );
