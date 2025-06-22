@@ -1,29 +1,34 @@
 import { useState} from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 import "./login.css";
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState('Patient');
+    const [userType, setUser] = useState('Patient');
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = {firstname, password, author};
-        setIsPending(true)
-        fetch()
-        navigate(-1)
+        axios.post('http://localhost:4000/login', { email, userType, password})
+        .then(result => {
+            console.log(result)
+            if(result.data === "Success"){
+                navigate("/dashboard");
+            }
+        })
+        .catch(err => console.log(err))
     }
 
     return (
         <>
             <div className="create">
                 <h2 className="text-2xl font-bold pt-[120px]">Log In</h2>
-                <form onSubmit={()=>{navigate("/dashboard")}}>
+                <form onSubmit={handleSubmit}>
                     <label>User Type</label>
-                    <select value={user} onChange={(e)=>setUser(e.target.value)}>
+                    <select value={userType} onChange={(e)=>setUser(e.target.value)}>
                         <option value="Patient">Patient</option>
                         <option value="Caregiver">Caregiver</option>
                         <option value="Doctor">Doctor</option>
@@ -52,7 +57,7 @@ const Login = () => {
                         />
                         </div>
                     </div>
-                    {!isPending && <button>Log In</button>}
+                    <button>Log In</button>
                 </form>
             </div>
         </>

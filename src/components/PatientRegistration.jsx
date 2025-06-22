@@ -24,7 +24,7 @@ const PatientRegistration = () => {
         if(userType === "Doctor"){
             navigate("/doctordashboard")
         }else{
-            navigate("/dasboard")
+            navigate("/dashboard")
         }
     }
 
