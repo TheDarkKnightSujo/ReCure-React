@@ -1,30 +1,31 @@
 import { Link } from 'react-router-dom';
-import "./PatientRegistration.css"
-
-// <p>Already have an account? <Link to="/login">Login</Link></p>
-
+import "./PatientRegistration.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const PatientRegistration = () => {
-    const [firstname, setFirstname] = useState('');
-    const [secondname, setSecondname] = useState('');
+    const [firstName, setFirstname] = useState('');
+    const [secondName, setSecondname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [cnfpassword, setCnf] = useState('')
-    const [user, setUser] = useState('Patient');
+    const [userType, setUser] = useState('Patient');
     const [isPending, setIsPending] = useState(false)
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = {firstname, password, author};
+        console.log("Done");
+        axios.post('http://localhost:4000/register', {firstName, secondName, email, userType, password})
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
 
-        setIsPending(true)
-
-        fetch()
-
-        navigate(-1)
+        if(userType === "Doctor"){
+            navigate("/doctordashboard")
+        }else{
+            navigate("/dasboard")
+        }
     }
 
     return (
@@ -32,13 +33,13 @@ const PatientRegistration = () => {
 
         <div className="create">
             <h2 className="text-2xl font-bold pt-[120px]">Sign Up to ReCure</h2>
-            <form onSubmit={()=>{navigate("/dashboard")}}>
+            <form onSubmit={handleSubmit}>
                 <div className="flex flex-row gap-4">
                     <div>
                     <label>First Name</label>
                     <input 
                         type="text" 
-                        value={firstname} 
+                        value={firstName} 
                         onChange={(e)=> setFirstname(e.target.value)} 
                         placeholder="Enter Firstname"
                         required
@@ -49,7 +50,7 @@ const PatientRegistration = () => {
                     <label>Surname</label>
                     <input 
                         type="text" 
-                        value={secondname} 
+                        value={secondName} 
                         onChange={(e)=> setSecondname(e.target.value)} 
                         placeholder="Enter Surname"
                         required
@@ -92,14 +93,21 @@ const PatientRegistration = () => {
                     </div>
                 </div>
 
+                {(password !== cnfpassword && cnfpassword !== "") && (
+                    <>
+                        <p className='font-bold text-red-500'>Password does not match</p>
+                    </>
+                )}
+
                 <label>User Type</label>
-                <select value={user} onChange={(e)=>setUser(e.target.value)}>
+                <select value={userType} onChange={(e)=>setUser(e.target.value)}>
                     <option value="Patient">Patient</option>
                     <option value="Caregiver">Caregiver</option>
                     <option value="Doctor">Doctor</option>
                 </select>
                 <p className='pb-2'>Already have an account? <Link to="/login">Login</Link></p>
-                {!isPending && <button>Sign Up</button>}
+
+                {(password !== cnfpassword && cnfpassword !== "")? (<button disabled>Sign Up</button>):(<button>Sign Up</button>)}
             </form>
         </div>
         </>

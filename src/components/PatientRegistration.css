@@ -33,3 +33,12 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.create button:disabled{
+  background: #f7d6df;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
