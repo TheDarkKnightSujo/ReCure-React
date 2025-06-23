@@ -1,16 +1,17 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserDoctor, faLaptopMedical, faHospitalUser } from '@fortawesome/free-solid-svg-icons'
+import { Link, useLocation } from "react-router-dom"
 import "./dashboard-doctor.css";
 
 const Dashboard_doctor = () => {
     return ( <>
     <div className="doctor-dashboard">
-       <header>
-      <div className="brand">
-        <h1><em><b>Doctor Dashboard</b></em></h1>
-      </div>
-      <button className="logout-btn">Logout</button>
-    </header>
+      <header className='ml-8'>
+        <div className="brand">
+          <h1><em><b>Doctor Dashboard</b></em></h1>
+        </div>
+        <div className="links text-xl font-bold ">
+                <Link to="/">Log Out</Link>
+        </div>
+      </header>
 
     
     <main>

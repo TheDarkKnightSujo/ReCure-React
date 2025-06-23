@@ -17,3 +17,74 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.quest-section {
+  margin: 40px auto 0 auto;
+  max-width: 900px;
+  background: #f0e5ec;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(249, 200, 70, 0.15);
+  padding: 24px 28px 18px 28px;
+  text-align: left;
+}
+.quest-title {
+  font-size: 24px;
+  color: #b51051;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.quest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.quest-list li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+.quest-list input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #b51051;
+  width: 18px;
+  height: 18px;
+}
+.quest-completed label {
+  color: #aaa;
+  text-decoration: line-through;
+}
+.tick {
+  color: #4caf50;
+  font-size: 18px;
+  margin-left: 6px;
+}
+.quest-reward {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #b51051;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.coin-display {
+    display: flex;
+    align-items: center;
+    background: #f0e5ec;
+    border: solid 0.5px;
+    border-radius: 24px;
+    padding: 4px 14px 4px 10px;
+    box-shadow: 0 2px 8px rgba(249, 200, 70, 0.15);
+    font-weight: bold;
+    font-size: 16px;
+    gap: 6px;
+}
+.coin-icon {
+    font-size: 22px;
+    margin-right: 4px;
+}
+.coin-count {
+    color: #b51051;
+    font-weight: 700;
+}

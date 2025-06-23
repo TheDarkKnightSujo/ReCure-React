@@ -15,8 +15,9 @@ const Navbar = () => {
             </div>
 
             {(pathmame === "/dashboard") ? (
-            <div className="links text-xl font-bold ">
+            <div className="links flex flex-row text-xl font-bold ">
                 <Link to="/">Profile</Link>
+                <Link to="/">Log Out</Link>
             </div>
             ):(
             <ul className="nav-links">
