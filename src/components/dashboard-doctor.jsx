@@ -6,10 +6,10 @@ const Dashboard_doctor = () => {
     return ( <>
     <div className="doctor-dashboard">
        <header>
-      <div class="brand">
+      <div className="brand">
         <h1><em><b>Doctor Dashboard</b></em></h1>
       </div>
-      <button class="logout-btn">Logout</button>
+      <button className="logout-btn">Logout</button>
     </header>
 
     

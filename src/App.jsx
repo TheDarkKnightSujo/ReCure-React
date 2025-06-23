@@ -6,6 +6,7 @@ import Login from './components/login.jsx';
 import PatientRegistration from './components/PatientRegistration.jsx';
 import Checkup from './components/echeckup.jsx';
 import Dashboard_doctor from './components/dashboard-doctor.jsx';
+import Dashboard_admin from './components/dashboard-admin.jsx';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -20,6 +21,7 @@ function App() {
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/checkup" element={<Checkup/>}/>
                 <Route exact path="/doctordashboard" element={<Dashboard_doctor/>}/>
+                <Route exact path="/admindashboard" element={<Dashboard_admin/>}/>
                 
             </Routes>
             <ToastContainer autoClose={2000} pauseOnHover={false}/>
