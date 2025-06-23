@@ -2,6 +2,7 @@ import { useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./login.css";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -16,7 +17,10 @@ const Login = () => {
         .then(result => {
             console.log(result)
             if(result.data === "Success"){
+                toast.success("Success");
                 navigate("/dashboard");
+            }else{
+                toast.error(result.data);
             }
         })
         .catch(err => console.log(err))
