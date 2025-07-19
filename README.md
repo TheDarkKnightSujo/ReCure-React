@@ -20,7 +20,7 @@ The project likely follows a standard React application structure, which general
 
 - Vinayak Pai (Vinayak314) - Responsible for the patient dashboard, eCheckup pages, login page and the backend development.
 
-- Suhaas Nandulamattam (TheDarkKnightSujo) - Responsible for all the other dashboard pages, logo and frontend framework.
+- Suhaas Nandulamattam (TheDarkKnightSujo) - Responsible for all the other dashboard pages, main landing page, logo and frontend framework.
 
 ## Getting Started (Assumed based on typical Vite/React setup)
 
