@@ -1,5 +1,11 @@
 # ReCure-React
 
+Video demo is present in the repository or can be opened using the drive link:
+
+```
+https://drive.google.com/drive/folders/1-sOhf4KiGGZMGxNbSyeoGlYF7ztS-C4O?usp=sharing
+```
+
 This repository was created for a hackathon and provides a minimal setup for a React project. It leverages Vite for a fast development experience and includes ESLint rules to help maintain code quality.
 
 ## Technologies Used
