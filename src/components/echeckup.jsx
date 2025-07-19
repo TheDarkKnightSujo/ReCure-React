@@ -1,7 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 import "./echeckup.css";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBDt3wzsAKhbZRgrm5px_SHMU4y8NNI3IM" });
+const ai = new GoogleGenAI({ apiKey: //enter api key 
+    });
 
 
 const Checkup = () => {
